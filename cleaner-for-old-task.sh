@@ -14,5 +14,5 @@ ARRAY_TASKS_ID=($(echo "$TASKS_ID" | jq -r '.[]'))
 
 for ID in "${ARRAY_TASKS_ID[@]}"; do
   curl --location --request DELETE $DATA_STORE_URL/$ID \
---header "Authorization: Bearer $BEARER_TOKEN"
+  --header "Authorization: Bearer $BEARER_TOKEN"
 done
